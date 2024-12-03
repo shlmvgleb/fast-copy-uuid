@@ -1,0 +1,66 @@
+.uuid-highlight {
+  background-color: rgba(147, 154, 255, 0.5); /* Желтая подсветка */
+  /* color: #111111; */
+  border-radius: 3px;
+  padding: 2px;
+  margin-bottom: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.uuid-highlight:hover {
+  background-color: rgba(193, 193, 201, 0.5); /* Зеленая подсветка при наведении */
+  transition: 0.2s;
+}
+
+/* Стили кнопки поиска UUID */
+#uuid-search-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #6200ea;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: grab;
+  z-index: 1000;
+  user-select: none;
+}
+
+/* Уведомление "Copied to clipboard" */
+.uuid-copy-notification {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #323232;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  animation: slide-in 0.5s ease forwards;
+}
+
+/* Анимация появления */
+@keyframes slide-in {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Анимация исчезновения */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}

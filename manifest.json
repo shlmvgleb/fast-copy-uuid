@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Fast copy UUID for swagger documentations",
+  "version": "1.0",
+  "description": "Find UUIDs to fast copy them to clipboard (swagger only)",
+  "permissions": [
+    "contextMenus"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://localhost:*/*", "*://0.0.0.0:*/*", "*://127.0.0.0:*/*"],
+      "js": ["./copy.js"],
+      "css": ["./css/copy.css"]
+    }
+  ]
+}
