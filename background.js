@@ -2,7 +2,7 @@
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
       id: "find-uuid-menu",
-      title: "Найти UUID", // Название пункта
+      title: "Find UUIDs", // Название пункта
       contexts: ["all"] // Пункт будет виден везде (текст, ссылки, страницы)
   });
 });
